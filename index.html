@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Maker App</title>
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+    <div class="container-fluid pt-5 text-warning">
+        <div class="crud-inputs container bg-dark py-4 px-5 rounded-4 m-auto">
+            <h1 class="text-center">Bookmarker App</h1>
+
+            <label for="siteName" class="my-2 h5">Site Name:</label>
+            <Input type="text" id="siteName" placeholder="BookMark Name..." class="form-control"></Input>
+            <div
+                class="card container-fluid bg-danger d-flex justify-content-center align-items-center text-white fw-bold bg-opacity-75 d-none">
+                <p class="lead m-0 p-1 " id="nameRequired">Book Name! is required!</p>
+            </div>
+
+            <label for="siteUrl" class="my-2 h5">Site Url:</label>
+            <Input type="text" id="siteUrl" placeholder="WebSite URL..." class="form-control"></Input>
+            <div
+                class="card container-fluid bg-danger d-flex justify-content-center align-items-center text-white fw-bold bg-opacity-75 d-none">
+                <p class="lead m-0 p-1" id="unvalidUrl">Unvalid URL!</p>
+            </div>
+            <div
+                class="card container-fluid bg-danger d-flex justify-content-center align-items-center text-white fw-bold bg-opacity-75 d-none">
+                <p class="lead m-0 p-1" id="exitedUrl">Exited URL!</p>
+            </div>
+
+            <div class="container-fluid my-4 mx-0">
+                <button id="btnAdd" class="btn btn-danger p-2 my-2 w-100">Add BookMark</button>
+                <button id="btnUpdate" class="btn btn-warning p-2 my-2 w-100">Update BookMark</button>
+            </div>
+        </div>
+        <div class="container my-4 w-50">
+            <input type="text" placeholder="Search..." class="form-control"></input>
+        </div>
+    </div>
+    <div class="container text-center">
+        <table class="table table-responsive bg-dark">
+            <thead class="table-light h4">
+                <tr>
+                    <th scope="col">N</th>
+                    <th scope="col">Site Name</th>
+                    <th scope="col">Site URL</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody class="fs-4 text-white" id="tableData">
+            </tbody>
+    </div>
+
+
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
